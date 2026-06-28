@@ -1,0 +1,133 @@
+:root {
+  color-scheme: light;
+  --ink: #2c2724;
+  --paper: #fce678;
+  --social: #f5b45c;
+  --social-icon: #8d562e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Fraunces, Georgia, serif;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.landing {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 16px;
+  padding: 56px 24px;
+  text-align: center;
+}
+
+.brand-image {
+  width: min(100%, 970px);
+}
+
+.brand-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: translateX(4.1%);
+}
+
+.statement {
+  max-width: 1100px;
+  margin: 64px 0 0;
+  color: var(--ink);
+  font-size: clamp(1.833rem, calc(4vw - 0.167rem), 3.833rem);
+  font-variation-settings: "SOFT" 70, "WONK" 1;
+  font-weight: 850;
+  line-height: 1.08;
+}
+
+.contact {
+  margin: 28px 0 0;
+  color: var(--ink);
+  font-size: clamp(1.833rem, calc(4vw - 0.167rem), 3.833rem);
+  font-variation-settings: "SOFT" 70, "WONK" 1;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 44px;
+  gap: 32px;
+}
+
+.social-link {
+  display: grid;
+  width: clamp(72px, 8vw, 108px);
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--social);
+  color: var(--social-icon);
+  text-decoration: none;
+}
+
+.social-link svg {
+  width: 46%;
+  height: 46%;
+  fill: currentColor;
+}
+
+.social-link:focus-visible {
+  outline: 4px solid var(--ink);
+  outline-offset: 5px;
+}
+
+.site-footer {
+  width: min(100%, 970px);
+  margin: 0 auto;
+  padding: 20px 24px 40px;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .landing {
+    gap: 12px;
+    padding: 40px 18px 32px;
+  }
+
+  .statement {
+    font-size: clamp(1.35rem, 5vw, 1.833rem);
+  }
+
+  .contact {
+    margin-top: 32px;
+    font-size: clamp(1.35rem, 5vw, 1.833rem);
+  }
+
+  .social-links {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin-top: 20px;
+    gap: 18px;
+  }
+
+  .site-footer {
+    padding: 18px 18px 28px;
+    font-size: 11px;
+    text-align: center;
+  }
+}
